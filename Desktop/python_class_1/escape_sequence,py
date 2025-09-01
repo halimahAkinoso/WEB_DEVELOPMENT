@@ -1,0 +1,34 @@
+print("Line1\nLine2")           #New Line
+print("Item1\tItem2")           # Tab space
+print("He said, \"Hello\"")     # Quoted string
+print('It\'s Python!')          # Apostrophe in single quote
+
+
+# Newline  (\n)
+print ("Welcome to Python\nLet's learn together!")
+
+
+#Tab (\t)
+print("Name\tAge\tLocation")
+print("Aisha\t25\tLagos")
+
+# Quotes inside string
+print("She said, \"Hello there!\"")
+print('It\'s a sunny day.')
+
+# Backslash
+print("File path: C:\\Users\\Aisha\\Documents")
+
+
+print("@\n@@\n@@@\n@@@@\n@@@@@\n@@@@@@")
+
+
+
+# print("\t*\n\t**\t\n***")
+
+# print("  m\n mmm\nmmmmmm\n\nmtmmmmm")
+
+# print("\t\t\t*    \n \t\t***   ")
+
+
+print("          *         \n**        \n****")
