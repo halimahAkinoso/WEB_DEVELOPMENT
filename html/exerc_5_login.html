@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Information</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    "
+  >
+    <h2 style="color: coral">Contact US</h2>
+    <form style="display: grid; gap: 15px">
+      <fieldset>
+        <legend>Contact Form</legend>
+        <p>
+          <label style="font-weight: bold">Name: </label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            style="padding: 10px; border: 1px solid #ddd; border-radius: 4px"
+            required
+          />
+        </p>
+        <p>
+          <label for="email" style="font-weight: bold">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            style="padding: 10px; border: 1px solid #ddd; border-radius: 4px"
+            required
+          />
+        </p>
+        <p>
+          <label style="font-weight: bold">Phone: </label>
+          <input
+            type="tel"
+            name="phone"
+            style="padding: 10px; border: 1px solid #ddd; border-radius: 4px"
+          />
+        </p>
+        <p>
+          <label style="font-weight: bold">Subject: </label>
+          <input
+            type="text"
+            name="phone"
+            style="padding: 10px; border: 1px solid #ddd; border-radius: 4px"
+          />
+        </p>
+        <p>
+          <label style="font-weight: bold">Message: </label>
+          <textarea id="message"
+              name="message"
+              rows="5"
+              style="
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                resize: vertical;
+              "></textarea>
+        </p>
+        <p>
+            Preferred Contact Method
+            <P><input type="radio" checked ><label>Email: </label>
+            <input type="radio" checked ><label>Phone: </label>
+            </P>
+        </p>
+        <button type="button" 
+        style="padding: 12px 20px;
+        background-color: rgb(17, 190, 132);
+        color: bisque;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;"
+        >Send Message</button>
+      </fieldset>
+    </form>
+    <h2 style="font-weight: bold;
+    margin-top: 40px;  color: cadetblue; text-align: center;">Company Information</h2>
+    <table style="width: 100%; margin: 40px; border-collapse: collapse;">
+<thead>
+    <tr style="background-color: bisque;">
+        <td>Attribute</td>
+        <td>Details</td>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">Company Name</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">Solace Computer</td>
+    </tr>
+ <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">Address</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">123, Garki Abuja</td>
+    </tr>
+
+     <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">Founded</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">Feb, 5 2020</td>
+    </tr>
+</tbody>
+    </table>

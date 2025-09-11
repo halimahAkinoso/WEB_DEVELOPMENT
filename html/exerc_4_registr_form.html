@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center; color: blue;">Registration Form</h2>
+    <div>
+        <form style="font-family: Arial, Helvetica, sans-serif; max-width: 500px; margin: 20px auto ; padding: 20px;">
+           <div style="margin-bottom: 15px;">
+             <label for="firstName" style="display: block; margin-bottom: 5px; color: #555; font-weight: bold;">
+              First Name: </label>
+             <input type="text" placeholder="Enter your first name" required style="width: calc(100% - 12px); padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+           </div>
+
+
+           <div style="margin-bottom: 15px;">
+        <label for="lastName" style="display: block; margin-bottom: 5px; color: #555;"><strong>Last Name: </strong><input type="text" placeholder="Enter your Last name" required style="width: calc(100% - 12px); padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></label>
+           </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px; color: #555;"><strong>Email: </strong><input type="email" placeholder="Enter your email address" required style="width: calc(100% - 12px); padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></label>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display: block; margin-bottom: 5px; color: #555;"><strong>Password : </strong><input type="password" placeholder="Enter your password" required style="width: calc(100% - 12px); padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></label>
+            </div>
+
+             <div style="margin-bottom: 15px;">
+                <label for="age" style="display: block; margin-bottom: 5px; color: #555;"><strong>Age : </strong><input type="number" required style="width: calc(100% - 12px); padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></label>
+             </div>
+
+              <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; color: #555;"><strong>Gender : </strong></label>
+                <label for="male" style="display: block; margin-bottom: 5px; color: #555;"><strong>Male : </strong></label>
+                
+                 <input type="radio" id="female" name="gender" value="female" style="margin-right: 5px;">
+                <label style="display: block; margin-bottom: 5px; color: #555;"><strong>Female : </strong></label>
+                 <input type="radio" id="male" name="gender" value="male" style="margin-right: 5px;">
+              </div>
+
+              <p style="margin-bottom: 15px;">
+               <label for="firstName" style="display: block; margin-bottom: 5px; color: #555;"><strong>Interests : </strong></label>
+                <input type="checkbox" name="Interests" value="coding" required style="margin-right: 5px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                <label>Coding</label>
+                <input value="reading" type="checkbox" name="reading" required style="margin-right: 5px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                <label for="reading" style="margin-right: 15px;">Reading</label>
+                <input type="checkbox" id="sport" name="Interests" value="sport" style="margin-right: 5px;">
+                <label for="Sports">Sports</label>]
+              </p>
+
+              <p style="margin-bottom: 15px;">
+                <label for="Country" style="display: block; margin-bottom: 5px; color:  #555;">Country: </label>
+                <select id="country" name="country" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="">Select Country</option>
+                    <option value="">Nigeria</option>
+                    <option value="">USA</option>
+                    <option value="">Saudi</option>
+                    <option value="">Canada</option>
+                    <option value="">Australia</option>
+                    <option value="">Ghana</option>
+                </select>
+              </p>
+            <button type="submit" style="background-color: aquamarine; color: blue;
+            padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;"
+            
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+</body>
+</html>
