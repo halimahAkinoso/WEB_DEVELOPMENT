@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .gen_container {
+            background-color: #f5f5f5;
+            /* border: 10px solid black; */
+        }
+        
+        /* ============ Header ========== */
+        header {
+            background-color: purple;
+            color: white;
+            padding: 1% 8%;
+            /* border: 5px solid yellow; */
+        }
+
+        .header_container {
+            /* border: 5px solid green; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu_menu {
+            display: flex;
+            /* border: 2px solid white; */
+            gap: 30px;
+            align-items: center;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .menu li {
+            font-size: 20px;
+        }
+
+        .logo {
+            font-family: 'Vampiro One', Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+        }
+
+        .login_signup {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login_signup button {
+            padding: 5px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(255, 217, 0);
+        }
+
+        #sign_up {
+            background-color: transparent;
+            border: 3px solid rgb(255, 217, 0);
+            color: white;
+            font-weight: 600;
+        }
+
+        .login_signup button:hover {
+            background-color: rgb(255, 196, 0);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #sign_up:hover {
+            background-color: rgb(255, 196, 0);
+            color: black;
+        }
+
+
+        /* ============= Hero ============ */
+        .hero {
+            padding: 1% 8%;
+        }
+
+        .hero_container{
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="gen_container">
+        <header>
+            <div class="header_container">
+                <p class="logo">Exam</p>
+                <div class="menu_menu">
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li>Home</li>
+                                <li>About</li>
+                                <li>Service</li>
+                                <li>Contact</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="login_signup">
+                        <button>Login</button>
+                        <button id="sign_up">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="hero">
+            <div class="hero_container">
+                <div class="hero_content">
+                    <h1>This is the Hero session</h1>
+                </div>
+                <div class="image_container">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
