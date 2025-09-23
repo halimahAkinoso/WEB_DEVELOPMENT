@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Sticky Header</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f8fafc;
+        color: #333;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #4f46e5;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(60, 72, 88, 0.1);
+        z-index: 1000;
+        padding: 18px 0 12px 0;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+      header h2 {
+        margin: 0 0 8px 0;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      nav {
+        text-align: center;
+      }
+      .nav-item {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        margin: 0 18px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .nav-item:hover {
+        background: #6366f1;
+        color: #fff200;
+      }
+      .main_div {
+        margin-top: 100px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(60, 72, 88, 0.08);
+        padding: 32px 24px;
+      }
+      section {
+        margin-bottom: 36px;
+      }
+      h1 {
+        color: #4f46e5;
+        margin-bottom: 18px;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      p,
+      ul {
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 18px;
+        font-size: 1.05rem;
+      }
+      ul {
+        padding-left: 24px;
+      }
+      .welcome_image {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #4f46e5;
+        box-shadow: 0 2px 8px rgba(60, 72, 88, 0.1);
+        margin: 16px auto;
+        display: block;
+        background: #e0e7ff;
+      }
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+      }
+      .contact-info-item {
+        background: #f3f4f6;
+        border-radius: 10px;
+        box-shadow: 0 1px 4px rgba(60, 72, 88, 0.07);
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 220px;
+      }
+      .contact-info-item i {
+        font-size: 1.3rem;
+        color: #4f46e5;
+      }
+      footer {
+        text-align: center;
+        padding: 18px 0 10px 0;
+        background: #4f46e5;
+        color: #fff;
+        font-size: 1rem;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        margin-top: 32px;
+      }
+      .footer-heart {
+        color: #e74c3c;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <header>
+        <h2>Halimat Sticky Header Page</h2>
+        <nav>
+          <a href="#home" class="nav-item">Home</a>
+          <a href="#about" class="nav-item">About</a>
+          <a href="#services" class="nav-item">Services</a>
+          <a href="#contact" class="nav-item">Contact</a>
+          <!-- <a href="#footer" class="my_nav">FOOTER</a> -->
+        </nav>
+      </header>
+
+      <section id="home">
+        <h1>Welcome to Halimat Website</h1>
+        <p>
+          Thank you for visiting . this page highlights my professional journey,
+          skills and projects. here, you will insight s into my work, area of
+          expertise and ongoing pursuits. i invite you to explore and connects
+          with me for potential collaborations and opportunities
+        </p>
+        <div class="welcome">
+          <img class="welcome_image" src="" alt="" />
+          <!-- You can add your image path above -->
+        </div>
+      </section>
+
+      <section id="about">
+        <h1>About Me</h1>
+        <p>
+          I am a passionate <strong>Software Developer</strong> with experience
+          in building responsive and user-friendly applications using
+          <strong>HTML, CSS, JavaScript</strong>and modern web technologies.
+        </p>
+        <p>
+          I enjoy solving real-world problems with clean, efficient code and
+          creating solutions that improve user experiences. My goal is to grow
+          into a versatile developer capable of delivering innovative and
+          scalable digital solutions.
+        </p>
+      </section>
+
+      <section id="services">
+        <h1>My Services</h1>
+        <p>
+          I am a passionate Software Engineer with expertise in building modern,
+          scalable, and user-friendly digital solutions. My goal is to transform
+          ideas into functional applications by combining creativity with
+          technical excellence. With a strong foundation in web technologies, I
+          focus on delivering high-quality software that meets both business and
+          user needs.
+        </p>
+        <ul>
+          <li>
+            Web Development – Designing and building responsive, interactive,
+            and performance-driven websites.
+          </li>
+          <li>
+            Frontend Engineering – Creating intuitive and visually engaging user
+            interfaces with clean code.
+          </li>
+          <li>
+            Backend Development – Developing secure and scalable server-side
+            applications and RESTful APIs.
+          </li>
+        </ul>
+        <p>
+          Whether you’re starting fresh or looking to upgrade, I’m here to make
+          it happen.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h1>Contact</h1>
+        <p>
+          We’d love to hear from you! Whether you have a question, feedback, or
+          just want to say hello, feel free to reach out. Your thoughts mean a
+          lot to us.
+        </p>
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <p>Email: halimahakin2@gmail.com.com</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <p>Phone: 08056159448</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-home"></i>
+            <p>Address: Olalekan Lawal Street Abeokuta</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer id="footer">
+      © 2025 halimat Website. All Rights Reserved.<br />
+      Made with <span class="footer-heart">&#10084;&#65039;</span> | Designed by
+      Halimah Akinoso
+    </footer>
+  </body>
+</html>
