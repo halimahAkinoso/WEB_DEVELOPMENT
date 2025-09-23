@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+
+</head>
+<body>
+
+
+    <script>
+        // Function declaration - creating the function
+function sayHello() {
+    console.log("Hello from my first function!");
+}
+
+// Function call - using the function
+sayHello();
+
+// You can call it multiple times
+sayHello();
+sayHello();
+
+console.log(""); // Empty line
+
+// Another simple function
+function showCurrentTime() {
+    let now = new Date();
+    console.log(`Current time: ${now.toLocaleTimeString()}`);
+}
+
+// Call the time function
+showCurrentTime();
+
+
+// Function with one parameter
+function greetPerson(name) {
+    console.log(`Hello, ${name}! Welcome to JavaScript!`);
+}
+
+// Call with different values
+greetPerson("Alice");
+greetPerson("Bob");
+greetPerson("Charlie");
+
+console.log(""); // Empty line
+
+// Function with multiple parameters
+function introduce(firstName, lastName, age) {
+    console.log(`Hi! I'm ${firstName} ${lastName} and I'm ${age} years old.`);
+}
+
+// Call with multiple arguments
+introduce("Jane", "Smith", 25);
+introduce("John", "Doe", 30);
+introduce("Sarah", "Johnson", 22);
+
+console.log(""); // Empty line
+
+// Function with default parameter
+function greetWithDefault(name = "Friend") {
+    console.log(`Hello, ${name}!`);
+}
+
+greetWithDefault("Maria");  // Uses provided name
+greetWithDefault();        // Uses default "Friend"
+
+
+console.log(""); // Empty line
+
+// Function that returns a calculated value
+function addNumbers(num1, num2) {
+    let result = num1 + num2;
+    return result;
+}
+
+// Store the returned value in a variable
+let sum = addNumbers(5, 3);
+console.log("Sum:", sum);
+
+// Use the returned value directly
+console.log("10 + 7 =", addNumbers(10, 7));
+
+console.log(""); // Empty line
+
+// Function that returns processed text
+function createFullName(first, last) {
+    return `${first} ${last}`.trim();
+}
+
+let fullName = createFullName("John", "Doe");
+console.log("Full name:", fullName);
+
+console.log(""); // Empty line
+
+// Function that returns a boolean
+function isAdult(age) {
+    return age >= 18;
+}
+
+console.log("Is 16 adult?", isAdult(16));
+console.log("Is 21 adult?", isAdult(21));
+
+// Use return value in other code
+let userAge = 15;
+if (isAdult(userAge)) {
+    console.log("User can vote!");
+} else {
+    console.log("User cannot vote yet.");
+}
+
+console.log(""); // Empty line
+// Calculator functions
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        return "Cannot divide by zero!";
+    }
+    return a / b;
+}
+
+function calculateArea(length, width) {
+    return length * width;
+}
+
+// Test the calculator functions
+console.log("Multiply 6 × 4 =", multiply(6, 4));
+console.log("Divide 15 ÷ 3 =", divide(15, 3));
+console.log("Divide 15 ÷ 0 =", divide(15, 0));
+console.log("Area of 5×3 room =", calculateArea(5, 3), "square units");
+    
+console.log("");
+let age = 25;
+let temperature = 45;
+let isRaining = false;
+
+// Simple if statement
+if (age >= 18) {
+    console.log("You are an adult!");
+}
+
+// If...else statement
+if (temperature > 80) {
+    console.log("It's hot today!");
+} else {
+    console.log("The weather is nice!");
+}
+
+// Another if...else
+if (isRaining) {
+    console.log("Don't forget your umbrella!");
+} else {
+    console.log("No umbrella needed today!");
+}
+
+console.log(""); // Empty line
+
+// Using variables in conditions
+let score = 85;
+let passingGrade = 70;
+
+if (score >= passingGrade) {
+    console.log(`Congratulations! You passed 
+    with ${score}%`);
+} else {
+    console.log(`Sorry, you scored ${score}%.
+     You need ${passingGrade}% to pass.`);
+}
+console.log(""); // Empty line
+let grade = 87;
+
+// Multiple conditions with else if
+if (grade >= 90) {
+    console.log("Grade: A - Excellent!");
+} else if (grade >= 80) {
+    console.log("Grade: B - Good work!");
+} else if (grade >= 70) {
+    console.log("Grade: C - Satisfactory");
+} else if (grade >= 60) {
+    console.log("Grade: D - Needs improvement");
+} else {
+    console.log("Grade: F - Please see instructor");
+}
+
+console.log(""); // Empty line
+
+// Weather decision system
+// let temperature = 45;
+let isSnowing = false;
+
+if (temperature < 32 && isSnowing) {
+    console.log("Bundle up! It's freezing and snowing!");
+} else if (temperature < 32) {
+    console.log("It's freezing! Wear a heavy coat!");
+} else if (temperature < 50) {
+    console.log("It's chilly. A jacket would be good.");
+} else if (temperature < 70) {
+    console.log("Nice weather! A light sweater is perfect.");
+} else {
+    console.log("It's warm! T-shirt weather!");
+}
+
+console.log(""); // Empty line
+
+// Time-based greeting
+let hour = 14; // 24-hour format (2 PM)
+
+if (hour < 12) {
+    console.log("Good morning!");
+} else if (hour < 18) {
+    console.log("Good afternoon!");
+} else {
+    console.log("Good evening!");
+}
+console.log(""); // Empty line
+// let age = 22;
+let hasLicense = true;
+let hasInsurance = false;
+let isWeekend = true;
+let isHoliday = false;
+let weather = "sunny";
+
+// AND operator (&&) - both conditions must be true
+if (age >= 18 && hasLicense) {
+    console.log("You can drive!");
+} else {
+    console.log("You cannot drive yet.");
+}
+
+// Multiple AND conditions
+if (age >= 18 && hasLicense && hasInsurance) {
+    console.log("You can drive legally!");
+} else {
+    console.log("You're missing something to drive legally.");
+}
+
+console.log(""); // Empty line
+
+// OR operator (||) - at least one condition must be true
+if (isWeekend || isHoliday) {
+    console.log("No work today!");
+} else {
+    console.log("Time to work!");
+}
+
+// NOT operator (!) - flips the boolean value
+if (!hasInsurance) {
+    console.log("Warning: You don't have insurance!");
+}
+
+console.log(""); // Empty line
+
+// Combining different logical operators
+if ((isWeekend || isHoliday) && weather === "sunny") {
+    console.log("Perfect day for a picnic!");
+}
+
+// Complex condition example
+// let temperature = 75;
+let humidity = 40;
+
+if (temperature >= 70 && temperature <= 85 && humidity < 60 && !isRaining) {
+    console.log("Perfect weather conditions!");
+} else {
+    console.log("Weather could be better.");
+}
+
+console.log("");
+
+// ## Combining Functions and Conditionals
+
+// Function that uses conditionals to make decisions
+function checkPassword(password) {
+    if (password.length < 8) {
+        return "Password too short! Must be at least 8 characters.";
+    } else if (password === "password" || password === "123456") {
+        return "Password too common! Choose something more secure.";
+    } else if (password.length > 20) {
+        return "Password too long! Keep it under 20 characters.";
+    } else {
+        return "Password looks good!";
+    }
+}
+
+// Test the password function
+console.log("Testing passwords:");
+console.log(checkPassword("abc"));           // Too short
+console.log(checkPassword("password"));      // Too common
+console.log(checkPassword("mySecurePass123")); // Good
+console.log(checkPassword("thisPasswordIsWayTooLongToBeUseful")); // Too long
+
+console.log(""); // Empty line
+
+// Function that categorizes age groups
+function getAgeGroup(age) {
+    if (age < 0) {
+        return "Invalid age";
+    } else if (age < 13) {
+        return "Child";
+    } else if (age < 20) {
+        return "Teenager";
+    } else if (age < 60) {
+        return "Adult";
+    } else {
+        return "Senior";
+    }
+}
+
+// Test age groups
+let ages = [5, 16, 25, 45, 67];
+ages.forEach(age => {
+    console.log(`Age ${age}: ${getAgeGroup(age)}`);
+});
+
+console.log(""); // Empty line
+
+// Function that calculates discounts
+function calculateDiscount(price, customerType, isFirstTime) {
+    let discount = 0;
+    
+    if (customerType === "student") {
+        discount = 0.10; // 10% discount
+    } else if (customerType === "senior") {
+        discount = 0.15; // 15% discount
+    } else if (customerType === "employee") {
+        discount = 0.20; // 20% discount
+    }
+    
+    // Additional discount for first-time customers
+    if (isFirstTime) {
+        discount += 0.05; // Extra 5%
+    }
+    
+    let finalPrice = price * (1 - discount);
+    return {
+        originalPrice: price,
+        discountPercent: discount * 100,
+        finalPrice: finalPrice.toFixed(2)
+    };
+}
+
+// Test discount function
+let result = calculateDiscount(100, "student", true);
+console.log("Price calculation:");
+console.log(`Original: $${result.originalPrice}`);
+console.log(`Discount: ${result.discountPercent}%`);
+console.log(`Final price: $${result.finalPrice}`);
+
+
+// let age = 20;
+// let temperature = 85;
+// let score = 92;
+let isLoggedIn = true;
+
+// Basic ternary operator usage
+let status = age >= 18 ? "adult" : "minor";
+console.log(`Status: ${status}`);
+
+// Ternary in template literals
+let greeting = `Good ${temperature > 80 ? "hot" : "nice"} day!`;
+console.log(greeting);
+
+// Ternary for function calls
+let message = isLoggedIn ? "Welcome back!" : "Please log in";
+console.log(message);
+
+// Multiple ternary operators (be careful - can get confusing)
+// let grade = score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "F";
+console.log(`Grade: ${grade}`);
+
+console.log(""); // Empty line
+
+// Function using ternary operator
+function getShippingCost(orderAmount, isPremium) {
+    return orderAmount > 50 ? 0 : isPremium ? 5 : 10;
+}
+
+console.log("Shipping examples:");
+console.log(`$30 order, regular: $${getShippingCost(30, false)}`);
+console.log(`$30 order, premium: $${getShippingCost(30, true)}`);
+console.log(`$60 order, regular: $${getShippingCost(60, false)}`);
+
+console.log(""); // Empty line
+
+// Ternary in arrays and objects
+let users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 16 },
+    { name: "Charlie", age: 30 }
+];
+
+users.forEach(user => {
+    let canVote = user.age >= 18 ? "Yes" : "No";
+    console.log(`${user.name} (${user.age}) can vote: ${canVote}`);
+});
+
+    </script>
+</body>
+</html>
