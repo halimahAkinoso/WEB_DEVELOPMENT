@@ -1,8 +1,8 @@
-function score(){
+function score(score, obtainable,expectedScore ){
     
-let score = 60
-let obtainable =100
-let expectedScore = 50
+// let score = 60
+// let obtainable =100
+// let expectedScore = 50
 if (score >= 100){
     console.log(`Congratulations!, you perform outstanding you score ${score} out of ${obtainable}`);
 }else if (score >= 90){
