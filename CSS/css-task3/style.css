@@ -1,0 +1,96 @@
+          *{margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 2.3;
+            background-color: #F5F5F5;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+       
+    
+
+        /* header {
+            background-color: #112c33;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+        } */
+        header h1{
+            font-size: 3rem;
+        }
+        header p{
+            font-size: 20px;
+        }
+        nav {
+             background: linear-gradient(to right, #00c6ff, grey);
+            margin-top: 20px;
+            padding: 65px;
+            border-radius: 10px;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav li a{
+            margin: 0 30px;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        li:hover {
+            background-color: cadetblue;
+        }
+        .magazine-grid {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px;
+        }
+        .grid-item1 h2{
+            color: #253e5ff6;
+            font-size: 30px;
+        }
+        .grid-item1 p{
+            font-size: 20px;
+        }
+        .sidebar-article {
+            background-color: rgb(214, 212, 212);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        .sidebar-article h3{
+            color: #253e5ff6;
+            font-size: 25px;
+        }
+        .sidebar-article p{
+            font-size: 20px;
+        }
+        .grid-item1 {
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            padding: 50px;
+            margin-top: 20px;
+        }
+        .grid-item  {
+            background-color: rgb(214, 212, 212);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .grid-item h3{
+            color: #253e5ff6;
+            font-size: 25px;
+        }
+        .grid-item p{
+            font-size: 20px;
+        }

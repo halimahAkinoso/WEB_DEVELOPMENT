@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ## :dart: Practice Exercise 1
+**Task:** Create a "Magazine Layout" using CSS Grid
+**Requirements:**
+- Header spanning full width
+- Featured article taking 2/3 width on left
+- Sidebar with 3 smaller articles stacked on right
+- Advertisement banner below featured article
+- Footer spanning full width
+- Use grid-template-areas for clean code
+- Include proper spacing and visual hierarchy
+**Bonus Challenges:**
+- Make one small article span 2 rows in the sidebar
+- Add a navigation bar in the header
+- Use auto-fit for responsive article cards in a section -->
+
+
+   
+    <div class="container">
+        <header>
+            <h1>Magazine Title</h1>
+            <p>Your source for interesting articles</p>
+        </header>
+        <nav>
+            <img style="width: 150px;height: 50px;" src="./image.png" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="magazine-grid">
+            <article>
+                <div class="grid-item1">
+                    <h2>Featured Article Title</h2>
+                    <p>This is the main featured article that takes up 2/3 of the width. It has the most important content that readers should see first.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>This is the main featured article that takes up 2/3 of the width. It has the most important content that readers should see first.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Advertisement</h3>
+                    <p>Check out our special offer!</p>
+                </div>
+            </article>
+            <aside class="sidebar">
+                <div class="sidebar-article">
+                    <h3>Sidebar Article 1</h3>
+                    <p>This is a shorter article in the sidebar.</p>
+                </div>
+                <div class="sidebar-article special-article">
+                    <h3>Special Article</h3>
+                    <p>This article spans 2 rows in the sidebar as a bonus feature.</p>
+                </div>
+                <div class="sidebar-article">
+                    <h3>Sidebar Article 2</h3>
+                    <p>Another interesting sidebar article.</p>
+                </div>
+            </aside>
+        </div>
+            <footer>
+                <p>© 2023 Magazine Layout. All rights reserved.</p>
+            </footer>
+    </div>
+</body>
+</html>
+
+    <header>
+
+        <div class="main">
+         <nav>
+            <img style="width: 150px;height: 50px;" src="./image.png" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Opinion</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+         </div>
+
+        <!-- <div class="container">
+            <nav class="navbar">
+                <div style="width: 50px;height: 50px; color: white;" class="logo"><img class="image" src="./image.png" alt="Logo"></div>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <div class="container">
+        <section class="hero">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>Manage all your activities from one place</p>
+        </section>
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2>Menu</h2>
+                <ul>
+                    <li>Overview</li>
+                    <li>Analytics</li>
+                    <li>Users</li>
+                    <li>Products</li>
+                    <li>Orders</li>
+                    <li>Settings</li>
+                </ul>
+            </aside>
+            <main class="content">
+                <h2>Dashboard Overview</h2>
+                <p>Here's what's happening with your business today.</p>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Users</h3>
+                        <p>245</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sales</h3>
+                        <p>$12,456</p>
+                    </div>
+                    <div class="card">
+                        <h3>Orders</h3>
+                        <p>327</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+</body>
+</html>

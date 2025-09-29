@@ -1,0 +1,59 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body {
+  background-color: #F5FFFA; /* Mint Cream */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.about-card {
+  background-color: #FFF8F0; /* Soft peach */
+  border: 2px solid #E0D4B7;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.card-title {
+  font-family: 'Georgia', serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #5D3A00;
+}
+
+.intro {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.details {
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.contact {
+  font-weight: 300;
+  font-size: 0.95em;
+  color: #555;
+}
+
+a {
+  text-decoration: underline;
+  color: #0077cc;
+  font-weight: bold;
+}

@@ -1,0 +1,13 @@
+.imgcontainer{
+    width: auto;
+    height: 300%;
+
+
+
+}
+.nav{
+    justify-content: center;
+    gap: 15%;
+    background-color: blue;
+
+}

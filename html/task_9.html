@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  div nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  h2 {
+    font-family: serif;
+  }
+
+  .container {
+    height: 70vh;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    gap: 32px;
+  }
+
+  .imgbox{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .imgbox img{
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .p{
+    padding: 0px 100px;
+  } 
+  
+  .about_us{
+    padding-top: 100px;
+    background-color: #b1bfce;
+    height: fit-content;
+    width: auto;
+  }
+
+  .about_content{
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+  }
+  .button:hover{
+
+  color: rgb(180, 174, 240);
+  text-decoration:none;
+  }
+  .button2{
+      color: rgb(183, 183, 230);
+  text-decoration:none;
+  }
+</style>
+<body>
+  <div style="background-color: rgb(223, 223, 231);">
+    
+    <!-- nav bar  -->
+      <div style=" padding: 20px; border-radius: 10px; margin-bottom: 20px; ">
+        <h2 style="color: #e74c3c;"></h2>
+
+        <nav class=" nav1" style="background-color: #2c3e50; padding: 30px; border-radius: 8px; margin-bottom: 20px; ">
+          <ul style="list-style: none; margin: 0; padding: 0;  ">
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="#home" style="color: white; text-decoration: none; font-weight: bold; margin-right: 15%;">Home</a>
+            </li>
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="#about" style="color: white; text-decoration: none;">About</a>
+            </li>
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="#services" style="color: white; text-decoration: none;">Services</a>
+            </li>
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- landing page -->
+
+      <h3 style="text-align: center; font-weight: bolder; font-size: 60px;  align-items: cente"></h3>
+      <div class="container">
+        <div>
+          <p style="font-size: 100px;font-weight: bolder; text-align: center; font-weight: bolder;"> NEURONOVA  <br> ARTIFICIAL INTELLIGENCE</p>
+        </div>
+        <div style=" width: 40%;">
+          <img style="width: 490px; height: 60vh; padding-left: 20px;" src="./6fc805d7-8f4c-478a-afdd-6b8c979e10e2.jpeg" alt="">
+        </div>
+      </div>
+
+
+
+    
+      <!-- <div
+        style="width: 80%;height: 45vh; border: 4px solid cornflowerblue; align-content: center; border-radius: 2%; margin-left: auto; margin-right: auto;">
+        <div
+          style="width: auto;height: 60vh;text-align: center; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+          Headquarters
+          San Francisco, California, USA
+          Founded
+          2015 by princess mfoniso, Sam Altman, Greg Brockman, Ilya Sutskever, and others Mission
+          To ensure that artificial general intelligence (AGI) benefits all of humanity. They aim to build safe and
+          powerful AI systems that can perform tasks as well as or better than humans.
+
+          <h1>How NeuroNova Operates</h1>
+          1. Research & Development
+          - OpenAI invests heavily in deep learning, reinforcement learning, and large language models.
+          - They publish academic papers and open-source tools to advance the field.
+          - Their most famous models include:
+          - GPT series (Generative Pre-trained Transformer): Used for text generation, translation, summarization, and
+          more.
+          - DALL·E: Generates images from text prompts.
+          - Codex: Powers GitHub Copilot, helping developers write code.
+          2. Training AI Models <h2> NeuroNova </h2>
+
+          - Uses massive datasets scraped from the internet (text, code, images).
+          - Requires high-performance computing infrastructure—thousands of GPUs and specialized chips.
+          - Training can cost millions of dollars and take weeks or months.
+          3. Safety & Ethics
+          - OpenAI has a dedicated team for AI alignment, ensuring models behave safely and ethically.
+          - Implements reinforcement learning from human feedback (RLHF) to fine-tune model behavior.
+          - Limits access to powerful models to prevent misuse (e.g., misinformation, bias).
+          4. Deployment & Products
+          - Offers APIs via OpenAI Platform for businesses and developers.
+          - Powers Microsoft products like Copilot in Word, Excel, and GitHub.
+          - ChatGPT is available as a web app and mobile app, used by millions daily.
+          5. Business Model
+          - Started as a non-profit, but now operates as a “capped-profit” company.
+          - Charges for API usage and premium subscriptions (e.g., ChatGPT Plus).
+          - Partners with Microsoft, which invested over $10 billion and provides cloud infrastructure via Azure.
+
+          </p>
+
+        </div>
+
+      </div> -->
+
+
+
+
+
+      <!-- About us -->
+      <div class="about_us">
+        <div class=" about_content p">
+          <div style="width: 40%; display: flex; justify-content: flex-end; align-items: center;">
+            <h4 style="text-align: center; font-weight: bolder; font-size: 50px;  align-items: cente">About us</h4>
+          </div>
+          <div style=" width: 60%; padding-top: 2%;">
+            <p style="font-size: x-large;  font-weight: 700; margin-bottom: 10px;">NeuroNova is a cutting-edge
+              artificial intelligence company
+              founded in 2021 by former OpenAI researchers. With a mission to build reliable, interpretable, and steerable
+              
+              Vision and Mission
+              NeuroNova core belief is that AI should be aligned with human values and safety.<br><br>Unlike many companies
+              racing to build the most powerful models, NeuroNova focuses on constitutional AI—a technique that trains
+              models to follow a set of guiding principles, making them more predictable and ethical.
+            </p>
+            <butto class="button" type="submit" style="background-color: #95a5a6; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                Submit Form
+            </button>
+            <button type="reset" style="background-color: #95a5a6; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-left: 10px;">
+                Reset Form
+            </button>
+          </div>
+        </div>
+        <!-- our service -->
+        <h1 style="text-align: center;padding: 2%; padding-bottom: 2%;">our servics</h1>
+        <div class="imgbox">
+            <div>
+              <div style="width: 290px; border: 2px solid blue;">Ui/Ux design & research</div>
+              <div style="width: 290px; border: 2px solid blue;">Web Development</div>
+              <div style="width: 290px; border: 2px solid blue;"></div>
+            </div>
+             <div>
+              <div style="width: 290px; border: 2px solid blue;"></div>
+              <div style="width: 290px; border: 2px solid blue;"></div>
+              <div style="width: 290px; border: 2px solid blue;"></div>
+            </div>
+      </div>
+      <!-- Gallery -->
+      <div class="imgcontainer">
+       
+          <section style="width: 290px; border: 2px solid blue;">
+            
+          </section>
+            
+          <img src="./AI Image.jpeg" alt=""
+            style="width: 290px; border: 2px solid blue; ">
+          <img src="./6fc805d7-8f4c-478a-afdd-6b8c979e10e2.jpeg" alt=""
+            style="width: 290px; border: 2px solid blue; ">
+          <img class="img1" src="./Download this Premium Photo about Future….jpeg" alt=""
+            style="width: 290px; border: 2px solid blue;">
+          <img src="./4341bb73-b1cc-4784-83fd-b76474fc275a.jpeg" alt=""
+            style="width: 290px; border: 2px solid blue; ">
+          <img src="./AI is solving real problems for marketers….jpeg" alt=""
+            style="width: 290px; border: 2px solid blue;">
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div style="background-color: #fff9e6; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+        <h3 style="color: #f39c12;">Advanced Form Validation</h3>
+
+        <form style="background-color: white; padding: 20px; border-radius: 8px; color:black">
+          <div style="margin-bottom: 15px;">
+            <label for="username" style="display: block; margin-bottom: 5px; font-weight: bold;">Username</label>
+            <input type="text" id="username" name="username" required pattern="[a-zA-Z0-9]{3,16}"
+              style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;"
+              placeholder="3-16 characters, letters and numbers only"
+              title="Username must be 3-16 characters and contain only letters and numbers">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label for="email-advanced" style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
+            <input type="email" id="email-advanced" name="email-advanced" required
+              style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;"
+              placeholder="user@example.com">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label for="website" style="display: block; margin-bottom: 5px; font-weight: bold;">Website (Optional)</label>
+            <input type="url" id="website" name="website"
+              style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;"
+              placeholder="https://example.com">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label for="age" style="display: block; margin-bottom: 5px; font-weight: bold;">Age</label>
+            <input type="number" id="age" name="age" min="13" max="120" required
+              style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;"
+              placeholder="Must be between 13 and 120">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label for="birthday" style="display: block; margin-bottom: 5px; font-weight: bold;">Birthday</label>
+            <input type="date" id="birthday" name="birthday" required
+              style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;">
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label for="bio" style="display: block; margin-bottom: 5px; font-weight: bold;">Bio</label>
+            <textarea id="bio" name="bio" maxlength="500" required
+              style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px; height: 100px;"
+              placeholder="Tell us about yourself (max 500 characters)"></textarea>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label>
+              <input type="checkbox" required>
+              I agree to the terms and conditions (Required)
+            </label>
+          </div>
+
+          <button class="button" type="submit"
+            style=" color: white; padding: 12px 24px; border: 2px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Submit Form
+          </button>
+          <button class="button2" type="reset"
+            style=" color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-left: 10px;">
+            Reset Form
+          </button>
+        </form>
+      </div>
+
+
+  </div>
+
+</body>
+
+</html>
