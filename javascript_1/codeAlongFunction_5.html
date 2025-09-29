@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Interactive Page</title>
+</head>
+<body>
+    <h1>Welcome Javascript in the browser!</h1>
+    <p id="message"> This text can be changed by JavaScript.</p>
+    <button onclick="changeMessage()">Click Me!</button>
+
+    <script>
+        // Javascript goes here
+        function changeMessage(){
+            console.log("Button was clicked!");// still shows in the console
+            // This changes the HTML content
+    document.getElementById('message').textContent = "JavaScript changed this text!";
+        }
+        // This runs when the page loads
+        console.log("Page loaded and JavaScript is working!");
+
+    </script>
+
+
+<h1 id="title">Original Title</h1>
+<p id="description">Original description text.</p>
+<p class="info">This paragraph has a class.</p>
+<ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+<button onclick="changeElements()">Change Elements</button>
+<button onclick="addListItem()">Add List Item</button>
+<button onclick="resetPage()">Reset</button>
+<script>
+    function changeElements(){
+        // change text content
+document.getElementById('title').textContent = "JavaScript Changed This Title!";
+// change HTML content (can include HTML tags)
+document.getElementById('description').innerHTML = "<strong>This text is now bold!</strong>";
+
+// find element by class name
+let infoElement = document.querySelector('.info');
+infoElement.textContent = "Found by class name and changed!";
+
+// change style
+document.getElementById('title').style.color = "blue";
+document.getElementById('title').style.fontSize = "36px";
+    }
+function addListItem(){
+    // create a new list item
+    let newItem = document.createElement('li');
+    newItem.textContent = 'New item added by JavaScript!';
+    // add it to the list
+    document.getElementById('list').appendChild(newItem)
+}
+function resetPage() {
+    // Reset everything back to original
+    document.getElementById('title').textContent = "Original Title";
+    document.getElementById('title').style.color = "";
+    document.getElementById('title').style.fontSize = "";
+    document.getElementById('description').innerHTML = "Original description text.";
+    document.querySelector('.info').textContent = "This paragraph has a class.";
+    // Reset list (keep only first 2 items)
+    let list = document.getElementById('list');
+    list.innerHTML = '<li>Item 1</li><li>Item 2</li>';
+}
+// Run when page loads
+console.log("Page ready! Try clicking the buttons.");
+</script>
+
+<!-- -----USER INPUT EXAMPLES-------- -->
+ <h1>User Input Demo</h1>
+ < ! ---- Text Input --- >
+ <div>
+    <label>Your Name:</label>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="greetUser()">Greet Me</button>
+ </div>
+ <div id="greeting"></div>
+ <hr>
+
+ < ! ---- Number Input --- >
+
+ <div>
+    <label>Age:</label>
+    <input type="number" id="ageInput"  placeholder="Enter your age">
+    <button onclick="checkAge()">Check Age</button>
+ </div>
+<div id="ageResult"></div>
+
+<hr>
+
+<! -- Multiple inputs -- >
+<div>
+    <h3>Simple Calculator</h3>
+    <input type="number" id="num1" placeholder="first number">
+    <select id="operator">
+    <option>+</option>
+    <option>-</option>
+    <option>x</option>
+    <option>/</option>
+</select>
+</div>
+</body>
+</html>
