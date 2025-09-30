@@ -406,6 +406,135 @@ console.log("Is premium:", loadBoolean('isPremium'));
 console.log("Non-existent number:", loadNumber('missing', 100));
 
 
+// Array and Function
+let favoriteColors = ["blue", "green", "red"]
+console.log("Original array;", favoriteColors);
+
+// Save array (convert to JSON string)
+localStorage.setItem('colors', JSON.stringify(favoriteColors));
+
+
+// Load array (convert back from JSON)
+let loadedColors = localStorage.getItem('colors');
+if(loadedColors !== null){
+loadedColors = JSON.parse(loadedColors);
+console.log("Loaded array:", loadedColors);
+console.log("First color:", loadedColors[0]);
+}
+console.log(""); // Empty line
+
+
+// Object example
+let userProfile = {
+    name: "John Doe",
+    age: 30,
+    email: "john@example.com",
+    preferences: {
+        theme: "dark",
+        notifications: true
+    }
+};
+
+console.log("Original object:", userProfile);
+
+// Save object
+localStorage.setItem('profile', JSON.stringify(userProfile));
+
+
+// Load object
+let loadedProfile = localStorage.getItem('profile');
+if (loadedProfile !== null) {
+    loadedProfile = JSON.parse(loadedProfile);
+    console.log("Loaded object:", loadedProfile);
+    console.log("User name:", loadedProfile.name);
+    console.log("Theme preference:", loadedProfile.preferences.theme);
+}
+
+console.log(""); // Empty line
+
+// Array of objects example (like menu items)
+let menuItems = [
+    { id: 1, name: "Coffee", price: 3.50, category: "Drinks" },
+    { id: 2, name: "Sandwich", price: 8.00, category: "Food" },
+    { id: 3, name: "Cookie", price: 2.25, category: "Dessert" }
+];
+
+// Save menu
+localStorage.setItem('cafeMenu', JSON.stringify(menuItems));
+
+// Load menu
+let savedMenu = localStorage.getItem('cafeMenu');
+if (savedMenu !== null) {
+    let loadedMenu = JSON.parse(savedMenu);
+    console.log("Loaded menu items:");
+    for (let item of loadedMenu) {
+        console.log(`${item.name}: $${item.price} (${item.category})`);
+    }
+}
+
+
+// localStorage can fail, so always use error handling
+
+function saveDataSafely(key, data) {
+    try {
+        localStorage.setItem(key, JSON.stringify(data));
+        return true;
+    } catch (error) {
+        console.log("Error saving data:", error.message);
+        return false;
+    }
+}
+
+function loadDataSafely(key, defaultValue = null) {
+    try {
+        let saved = localStorage.getItem(key);
+        if (saved === null) {
+            return defaultValue;
+        }
+        return JSON.parse(saved);
+    } catch (error) {
+        console.log("Error loading data:", error.message);
+        return defaultValue;
+    }
+}
+
+
+// Test error handling
+let testData = { name: "Test User", scores: [90, 85, 92] };
+
+if (saveDataSafely('testUser', testData)) {
+    console.log("Data saved successfully");
+} else {
+    console.log("Failed to save data");
+}
+
+let loaded = loadDataSafely('testUser', { name: "Default", scores: [] });
+console.log("Loaded data:", loaded);
+
+// Test with corrupted data
+localStorage.setItem('corruptedData', 'invalid json{');
+let corrupted = loadDataSafely('corruptedData', "default value");
+console.log("Corrupted data result:", corrupted);
+
+console.log(""); // Empty line
+
+// Check localStorage availability
+function isLocalStorageAvailable() {
+    try {
+        let test = 'test';
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+
+if (isLocalStorageAvailable()) {
+    console.log("localStorage is available");
+} else {
+    console.log("localStorage is not available");
+}
       </script>
 
 </body>
