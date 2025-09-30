@@ -320,7 +320,93 @@ console.log("Page ready! Try clicking the buttons.");
         
         // Initialize page
         logEvent('Page loaded successfully');
-    </script>
+
+        localStorage.setItem('userName', 'Alice');
+        localStorage.setItem('userAge', 25);
+        localStorage.setItem('isLoggedIn','true');
+        // save
+        let name =localStorage.getItem('userName');
+        let age =localStorage.getItem('userAge');
+        let loggedIn =localStorage.getItem('isLoggedIn');
+        console.log(name);
+        console.log(age);
+        console.log(loggedIn);
+// checked if data exist
+        if (localStorage.getItem('userName') !== null){
+            console.log("User name is saved");
+        }else{
+            console.log("No user name saved");
+        }
+
+        let price = 15.99;
+        localStorage.setItem('productPrice', price.toString());
+        // let savedPrice = localStorage.getItem('productPrice')
+        console.log(price);
+        console.log("");
+        localStorage.setItem('productPrice',price);
+        console.log(price);
+// check if data exist
+if (localStorage.getItem('productPrice')!== null){
+console.log("Price is saved");
+}else{
+    console.log("Price does not saved");
+}
+console.log("")
+// or you use
+    let savedPrice = localStorage.getItem('productPrice');
+if (savedPrice !== null) {
+    savedPrice = Number(savedPrice); // Convert string to number
+    console.log("Price:", savedPrice, typeof savedPrice);
+}
+console.log("");
+// saving booleans
+let isActive = true;
+localStorage.setItem('userActive',isActive.toString());
+// loading boolean
+
+localStorage.getItem('userActive');
+console.log(isActive);
+console.log("");
+let savedActive = localStorage.getItem('userActive');
+
+console.log(isActive);
+
+if(localStorage.getItem ('userActive')!== null){ 
+console.log("user is:", isActive);
+
+}else{
+console.log("user activeness is null");
+
+}
+// function  save number
+function saveNumber(key, value){
+    localStorage.setItem(key, value.toString());
+}
+// function to retrieve number
+function loadNumber(key, defaultValue = 0) {
+    let saved = localStorage.getItem(key);
+    return saved !== null ? Number(saved) : defaultValue;
+}
+//  function save boolean
+function saveBoolean(key, value) {
+    localStorage.setItem(key, value.toString());
+}
+// function to retrieve boolean
+
+function loadBoolean(key, defaultValue = false) {
+    let saved = localStorage.getItem(key);
+    return saved !== null ? saved === 'true' : defaultValue;
+}
+// Test the helper functions
+saveNumber('itemCount', 42);
+saveBoolean('isPremium', true);
+
+console.log("Item count:", loadNumber('itemCount'));
+console.log("Is premium:", loadBoolean('isPremium'));
+console.log("Non-existent number:", loadNumber('missing', 100));
+
+
+      </script>
 
 </body>
 </html>
