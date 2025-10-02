@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes and Object</title>
+    <title>Classes and ObjectOP</title>
 </head>
 <body>
     <script>
 
 
         // Creating menu items the hard way - lots of repetition
-// let coffee = {
-//     id: 1,
-//     name: "Coffee",
-//     price: 3.50,
-//     category: "Drinks",
-//     getDisplayInfo: function() {
-//         return `${this.name} - $${this.price}`;
-//     },
-//     updatePrice: function(newPrice) {
-//         this.price = newPrice;
-//     }
-// };
+let coffee = {
+    id: 1,
+    name: "Coffee",
+    price: 3.50,
+    category: "Drinks",
+    getDisplayInfo: function() {
+        return `${this.name} - $${this.price}`;
+    },
+    updatePrice: function(newPrice) {
+        this.price = newPrice;
+    }
+};
 
-// let sandwich = {
-//     id: 2,
-//     name: "Sandwich", 
-//     price: 8.00,
-//     category: "Food",
-//     getDisplayInfo: function() {
-//         return `${this.name} - $${this.price}`;  // Same code repeated!
-//     },
-//     updatePrice: function(newPrice) {           // Same code repeated!
-//         this.price = newPrice;
-//     }
-// };
+let sandwich = {
+    id: 2,
+    name: "Sandwich", 
+    price: 8.00,
+    category: "Food",
+    getDisplayInfo: function() {
+        return `${this.name} - $${this.price}`;  // Same code repeated!
+    },
+    updatePrice: function(newPrice) {           // Same code repeated!
+        this.price = newPrice;
+    }
+};
 
 
 
@@ -70,13 +70,13 @@ class MenuItem {
 }
 
 // Creating objects using the class
-let coffee = new MenuItem(1, "Latte", 4.50, "Drinks");
-let sandwich = new MenuItem(2, "Club Sandwich", 12.99, "Food");
+let coffee2 = new MenuItem(1, "Latte", 4.50, "Drinks");
+let sandwich2 = new MenuItem(2, "Club Sandwich", 12.99, "Food");
 let dessert = new MenuItem(3, "Chocolate Cake", 6.50, "Desserts");
 
 console.log("Created menu items:");
-console.log(coffee.getDisplayInfo());
-console.log(sandwich.getDisplayInfo());
+console.log(coffee2.getDisplayInfo());
+console.log(sandwich2.getDisplayInfo());
 console.log(dessert.getDisplayInfo());
 
 console.log(""); // Empty line
@@ -88,13 +88,13 @@ console.log(sandwich.updatePrice(-2)); // This should fail
 console.log(""); // Empty line
 
 console.log("Expensive items:");
-console.log(`${coffee.name} is expensive: ${coffee.isExpensive()}`);
-console.log(`${sandwich.name} is expensive: ${sandwich.isExpensive()}`);
+console.log(`${coffee2.name} is expensive: ${coffee2.isExpensive()}`);
+console.log(`${sandwich2.name} is expensive: ${sandwich2.isExpensive()}`);
 console.log(`${dessert.name} is expensive: ${dessert.isExpensive()}`);
 
 // Adding More Functionality to Classes
 
-class MenuItem {
+class MenuItem2 {
     constructor(id, name, price, category, description = "") {
         this.id = id;
         this.name = name;
@@ -175,37 +175,37 @@ class MenuItem {
 }
 
 // Test the enhanced class
-let latte = new MenuItem(1, "Caramel Latte", 5.50, "Drinks", "Rich espresso with caramel syrup");
-let burger = new MenuItem(2, "Beef Burger", 13.99, "Food", "Juicy beef patty with fresh toppings");
+let latte2 = new MenuItem2(1, "Caramel Latte", 5.50, "Drinks", "Rich espresso with caramel syrup");
+let burger2 = new MenuItem2(2, "Beef Burger", 13.99, "Food", "Juicy beef patty with fresh toppings");
 
 console.log("Menu items created:");
-console.log(latte.getDisplayInfo());
-console.log(burger.getFullDetails());
+console.log(latte2.getDisplayInfo());
+console.log(burger2.getFullDetails());
 
 console.log(""); // Empty line
 
 console.log("Testing business logic:");
-console.log(latte.recordOrder());
-console.log(latte.recordOrder());
-console.log(latte.recordOrder());
-console.log(latte.recordOrder());
-console.log(latte.recordOrder());
-console.log("Latte popularity:", latte.getPopularityLevel());
+console.log(latte2.recordOrder());
+console.log(latte2.recordOrder());
+console.log(latte2.recordOrder());
+console.log(latte2.recordOrder());
+console.log(latte2.recordOrder());
+console.log("Latte popularity:", latte2.getPopularityLevel());
 
 console.log(""); // Empty line
 
-console.log(burger.markUnavailable());
-console.log(burger.recordOrder()); // Should fail
+console.log(burger2.markUnavailable());
+console.log(burger2.recordOrder()); // Should fail
 
 console.log(""); // Empty line
 
-console.log(latte.applyDiscount(20));
-console.log(latte.getDisplayInfo());
+console.log(latte2.applyDiscount(20));
+console.log(latte2.getDisplayInfo());
 
 
 // Inheritance - Extending Classes
 // Base class - common functionality for all menu items
-class MenuItem {
+class MenuItem3 {
     constructor(id, name, price, category) {
         this.id = id;
         this.name = name;
@@ -225,7 +225,7 @@ class MenuItem {
 }
 
 // Specialized class for drinks - inherits from MenuItem
-class DrinkItem extends MenuItem {
+class DrinkItem extends MenuItem3 {
     constructor(id, name, price, size, temperature, hasCaffeine = false) {
         super(id, name, price, "Drinks"); // Call parent constructor
         this.size = size;
@@ -261,7 +261,7 @@ class DrinkItem extends MenuItem {
 }
 
 // Specialized class for food items
-class FoodItem extends MenuItem {
+class FoodItem extends MenuItem3 {
     constructor(id, name, price, servingSize, isVegetarian = false, allergens = []) {
         super(id, name, price, "Food"); // Call parent constructor
         this.servingSize = servingSize;
@@ -301,14 +301,14 @@ class FoodItem extends MenuItem {
 }
 
 // Create specialized objects
-let latte = new DrinkItem(1, "Vanilla Latte", 4.25, "Medium", "Hot", true);
+let latte3 = new DrinkItem(1, "Vanilla Latte", 4.25, "Medium", "Hot", true);
 let icedTea = new DrinkItem(2, "Green Iced Tea", 2.75, "Large", "Cold", false);
 
 let burger = new FoodItem(3, "Veggie Burger", 11.50, "Regular", true, ["Gluten", "Soy"]);
 let pasta = new FoodItem(4, "Spicy Pasta", 13.99, "Large", true, ["Gluten"]);
 
 console.log("Specialized menu items:");
-console.log(latte.getDisplayInfo());
+console.log(latte3.getDisplayInfo());
 console.log(icedTea.getDisplayInfo());
 console.log(burger.getDisplayInfo());
 console.log(pasta.getDisplayInfo());
@@ -316,9 +316,9 @@ console.log(pasta.getDisplayInfo());
 console.log(""); // Empty line
 
 console.log("Drink-specific operations:");
-console.log(latte.upsize());
-console.log(latte.changeTemperature("Iced"));
-console.log("Updated latte:", latte.getDisplayInfo());
+console.log(latte3.upsize());
+console.log(latte3.changeTemperature("Iced"));
+console.log("Updated latte:", latte3.getDisplayInfo());
 
 console.log(""); // Empty line
 
@@ -331,7 +331,7 @@ console.log("Safe for nuts allergy:", burger.checkSafeForAllergy("Nuts"));
 console.log(""); // Empty line
 
 console.log("Inherited methods still work:");
-console.log(latte.updatePrice(4.75));
+console.log(latte3.updatePrice(4.75));
 console.log(burger.updatePrice(12.00));
 
 
@@ -534,11 +534,11 @@ let cafe = new CafeManager();
 
 // Create menu items using different classes
 let latte = new DrinkItem(1, "Caramel Latte", 4.50, "Medium", "Hot", true);
-let sandwich = new FoodItem(2, "Club Sandwich", 9.99, "Regular", false, ["Gluten"]);
+let sandwich3 = new FoodItem(2, "Club Sandwich", 9.99, "Regular", false, ["Gluten"]);
 let muffin = new MenuItem(3, "Blueberry Muffin", 3.25, "Desserts");
 
 cafe.addMenuItem(latte);
-cafe.addMenuItem(sandwich);
+cafe.addMenuItem(sandwich3);
 cafe.addMenuItem(muffin);
 
 console.log("Menu items added to system");

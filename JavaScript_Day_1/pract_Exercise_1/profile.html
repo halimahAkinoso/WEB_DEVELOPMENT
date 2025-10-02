@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Profile Card</title>
+</head>
+<body>
+    <h1>Student Profile Card</h1>
+    <button onclick="PersonalInformation()">My Profile</button>
+
+    <script>
+    function PersonalInformation() {
+        let FirstName = "Esther";
+        let LastName = "Egberongbe";
+        let Age = 20;
+        let SchoolName = "Solace Coding School";
+        let grade = "A";
+        let isGraduated = false;
+
+        let Name = FirstName + " " + LastName;
+
+        console.log("Full Name: ", `${Name}`.toUpperCase());
+        
+        console.log("Grade: ", `${grade}`.trim());
+        
+           
+        console.log("-----------Student Profile----");
+           console.log("Full Name:",`${Name}`.toUpperCase());
+           console.log("Full Name Length:" , `${Name}`.length);
+            // console.log("Age:" ,`${Age}`, "Next Year: ",`${age + 1}`);
+            console.log(`${Age} , (Next Year: ${Age + 1})`);
+            console.log("school Name: ", `${SchoolName}`.toLowerCase());
+            console.log("Grade: ", `${grade}`);
+            console.log("Graduated: ", `${isGraduated}`);
+        
+        
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Simple calculator</title>
+</head>
+<body>
+    <h3>Simple calculator</h3>
+    <button onclick="calculate()"> click to calculate</button>
+
+    <script>
+        function calculate(){
+            let num1 = Number(prompt("Enter First number: "))
+            let num2 = Number(prompt("Enter Second number: "))
+
+// let num1 =  Number(prompt("Enter a number")) 
+
+
+            let addition = num1 + num2;
+            let subtraction = num1 - num2;
+            let multiplication = num1 * num2;
+            let division = num1 / num2;
+            let remainder = num1 % num2;
+            let expo = num1 ** num2;
+            let average = (num1 + num2)/2;
+console.log("------Simple Calculator --------")
+console.log("Numbers: ", num1 ,"and" ,num2)
+            console.log("Addition: ", `${addition}`);
+            console.log("Subtraction: ", `${subtraction}`);
+            console.log("Multiplication: ", `${multiplication}`);
+             console.log("Division: ", `${division}`);
+             console.log("Remainder: ", `${remainder}`);
+             console.log("Exponentiation: ", `${expo}`);
+             console.log("Average: ", `${average}`);
+             console.log("Is Num1 greater than Num2?" , `${num1 > num2}`)
+             console.log(`Between  ${num1} and  ${num2}  the larger number is ${Math.max(num1,num2)}`);
+            
+            
+
+        }
+    </script>
+</body>
+</html>
