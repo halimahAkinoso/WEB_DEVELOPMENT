@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Class Solution</title>
+</head>
+<body>
+
+    <h1>Book Class Example</h1>
+    <div id="output"></div>
+
+    <script>
+        class Book {
+            constructor(title, author, year) {
+                this.title = title;
+                this.author = author;
+                this.year = year;
+                this.isBorrowed = false;
+            }
+
+            getSummary() {
+                return `Book: ${this.title} by ${this.author} (${this.year})`;
+            }
+
+            borrowBook() {
+                this.isBorrowed = true;
+            }
+        }
+
+        const book1 = new Book('The Hitchhiker\'s Guide to the Galaxy', 'Douglas Adams', 1979);
+        const book2 = new Book('1984', 'George Orwell', 1949);
+
+        const outputDiv = document.getElementById('output');
+
+        outputDiv.innerHTML += `<p>${book1.getSummary()}</p>`;
+        outputDiv.innerHTML += `<p>${book2.getSummary()}</p>`;
+
+        // Challenge: Call borrowBook() and show the status
+        book1.borrowBook();
+        outputDiv.innerHTML += `<p>Is "${book1.title}" borrowed? ${book1.isBorrowed}</p>`;
+        outputDiv.innerHTML += `<p>Is "${book2.title}" borrowed? ${book2.isBorrowed}</p>`;
+
+    </script>
+</body>
+</html>
