@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ratings System</title>
+</head>
+<body>
+    <h1>Movie Ratings System</h1>
+
+    <section>
+        <h2>Add New Movie</h2>
+        <label for="movieName">Movie Name:</label>
+        <input type="text" id="movieName">
+        <label for="movieRating">Rating (1-10):</label>
+        <input type="number" id="movieRating" min="1" max="10">
+        <button onclick="addMovieFromInput()">Add Movie</button>
+    </section>
+
+    <section>
+        <h2>Movie Summary</h2>
+        <button onclick="printSummary()">Show Summary</button>
+        <pre id="summaryOutput"></pre>
+    </section>
+
+    <section>
+        <h2>Statistics</h2>
+        <button onclick="displayAverageRating()">Average Rating</button>
+        <p id="averageRatingOutput"></p>
+        <button onclick="displayTopMovie()">Top Movie</button>
+        <p id="topMovieOutput"></p>
+    </section>
+
+    <section>
+        <h2>Sorted Movies (Highest to Lowest Rating)</h2>
+        <button onclick="displaySortedMovies()">Sort and Display</button>
+        <pre id="sortedMoviesOutput"></pre>
+    </section>
+
+    <script src="/JavaScript_Day_3/practice_exercise_3/movieRatingSystem.js"></script>
+</body>
+</html>

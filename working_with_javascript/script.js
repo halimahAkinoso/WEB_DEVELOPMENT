@@ -88,11 +88,11 @@ console.info(" this is information message")
 
 
 // function structure
-function funtionName(parameters){
+function functionName(parameters){
     // code to execute
 
     return result; // optional
-}
+}c
 // your first function
 
 // function declaration - creating the function

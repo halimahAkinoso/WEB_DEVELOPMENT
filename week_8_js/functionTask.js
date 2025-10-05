@@ -6,7 +6,7 @@ function score(score, obtainable,expectedScore ){
 if (score >= 100){
     console.log(`Congratulations!, you perform outstanding you score ${score} out of ${obtainable}`);
 }else if (score >= 90){
-    console.log("Grade: A -  Execellent")
+    console.log("Grade: A -  Excellent")
 }else if (score >= 80){
     console.log("Grade: B - Good work ")
 }else if (score >= 70){

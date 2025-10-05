@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Membership System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Library Membership System</h1>
+    <div class="container">
+        <h2>Member Information</h2>
+        <p>Name: <span id="memberName"></span></p>
+        <p>Membership Type: <span id="memberType"></span></p>
+        <p>Borrowed Books: <span id="borrowedCount"></span></p>
+        <p id="membershipInfoMessage"></p>
+
+        <div class="actions">
+            <button onclick="borrowBook('The Hobbit')">Borrow 'The Hobbit'</button>
+            <button onclick="borrowBook('The Lord of the Rings')">Borrow 'The Lord of the Rings'</button>
+            <button onclick="updateDisplay()">Update Info</button>
+        </div>
+    </div>
+    <script src="/JavaScript_Day_4/practiceExercise_3/libraryMembershipSystem.js"></script>
+</body>
+</html>

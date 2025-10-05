@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, button { margin-bottom: 10px; padding: 8px; }
+        #report { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Student Grade Manager</h1>
+
+    <h2>Add Student</h2>
+    <input type="text" id="studentNameInput" placeholder="Student Name">
+    <input type="number" id="studentGradeInput" placeholder="Grade (0-100)">
+    <button onclick="addStudent()">Add Student</button>
+
+    <h2>Actions</h2>
+    <button onclick="generateReport()">Generate Report</button>
+
+    <div id="report">
+        <!-- Report will be displayed here -->
+    </div>
+
+    <script src="/JavaScript_Day_3/practice_exercise_4/studentReportSystem.js"></script>
+</body>
+</html>

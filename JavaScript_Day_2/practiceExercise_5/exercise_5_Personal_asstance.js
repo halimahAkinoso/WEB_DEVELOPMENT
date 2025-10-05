@@ -19,5 +19,5 @@ function personalAssistant(time, weather, day) {
   console.log(message);
 }
 
-// Example function call to display output
+
 personalAssistant(13, "rainy", "workday");

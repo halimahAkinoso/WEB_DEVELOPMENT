@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Shopping Calculator</title>
+    <script
+      src="/JavaScript_Day_2/practiceExercise_7/exercise_7_shopping_calculator.js"
+      defer
+    ></script>
+    <style>
+      .shopping-cal {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        border: 2px solid #007bff;
+        color: black;
+      }
+      .function-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        border: none;
+      }
+
+      .function-button:hover {
+        background-color: #0056b3;
+      }
+
+      .output {
+        background-color: #e9ecef;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-family: "Courier New", monospace;
+        border: 4px solid #8ce6a1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Smart Shopping Calculator</h1>
+
+    <div class="shopping-cal">
+      <p>Click To Run Smart Shopping Calculator</p>
+      <button onclick="productCalculatorUI()" class="function-button">
+        Product Calculator
+      </button>
+      <div id="variable-output" class="output">
+        Click a button to see the output...
+      </div>
+    </div>
+
+    <div class="shopping-cal">
+      <p>Click to Apply Different Tax Rates Based on Location</p>
+      <button class="function-button" onclick="taxCalculatorUI()">
+        Tax Calculator
+      </button>
+    </div>
+
+    <div class="shopping-cal">
+      <p>Click to Calculate Shipping Based on Weight and Distance</p>
+      <button class="function-button" onclick="shippingCalculatorUI()">
+        Shipping Calculator
+      </button>
+    </div>
+
+    <div class="shopping-cal">
+      <p>Click To Apply Different Member Benefits</p>
+      <button class="function-button" onclick="membershipDiscountsUI()">
+        Membership Discount
+      </button>
+    </div>
+
+    <div class="shopping-cal">
+      <p>Click To Generate Receipt</p>
+      <button class="function-button" onclick="finalReceiptGeneratorUI()">
+        Receipt Generator
+      </button>
+    </div>
+
+    <div id="receipt" class="output">Click a button to see the output...</div>
+  </body>
+</html>
