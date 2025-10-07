@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Slide Show</title>
+    <style>
+      #image-div {
+        width: 400px;
+        height: 250px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f8f8;
+        border: 2px solid #333;
+      }
+      #image-div img {
+        max-width: 100%;
+        max-height: 100%;
+        display: none;
+      }
+      #image-div img.active {
+        display: block;
+      }
+      .controls {
+        text-align: center;
+        margin-top: 10px;
+      }
+      button {
+        padding: 8px 16px;
+        margin: 0 5px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="image-div">
+      <img
+        src="/JavaScript_Day_8/practiceExercise_1/images/islam 1.jpg"
+        class="active"
+      />
+      <img src="/JavaScript_Day_8/practiceExercise_1/images/islam 4.jpg" />
+      <img src="/JavaScript_Day_8/practiceExercise_1/images/islam 2.jpg" />
+      <img src="/JavaScript_Day_8/practiceExercise_1/images/islam 3.jpg" />
+    </div>
+    <div class="controls">
+      <button onclick="pauseSlideshow()">Pause</button>
+      <button onclick="resumeSlideshow()">Resume</button>
+    </div>
+    <script>
+      const images = document.querySelectorAll("#image-div img");
+      let current = 0;
+      let intervalId = null;
+
+      function showImage(idx) {
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === idx);
+        });
+      }
+
+      function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+      }
+
+      function startSlideshow() {
+        if (intervalId === null) {
+          intervalId = setInterval(nextImage, 3000);
+        }
+      }
+
+      function pauseSlideshow() {
+        if (intervalId !== null) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+      }
+
+      function resumeSlideshow() {
+        startSlideshow();
+      }
+
+      // Start slideshow on page load
+      startSlideshow();
+    </script>
+  </body>
+</html>

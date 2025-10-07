@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+</head>
+<body>
+   
+    
+    <script>
+        // Example 1: Simple delay
+setTimeout(function() {
+    console.log("Hello after 1 second");
+}, 1000);
+
+// Example 2: With arrow function (shorter way)
+setTimeout(() => {
+    console.log("Hello after 3 seconds");
+}, 3000);
+
+// Example 3: Using a named function
+function showMessage() {
+    console.log("This is a delayed message");
+}
+
+setTimeout(showMessage, 2000);
+
+// Example 4: Multiple timers
+setTimeout(() => console.log("1 second"), 1000);
+setTimeout(() => console.log("2 seconds"), 2000);
+setTimeout(() => console.log("3 seconds"), 3000);
+
+// You can cancel a timeout before it runs
+
+// Save the timer ID
+let timerId = setTimeout(() => {
+    console.log("This will NOT run");
+}, 5000);
+
+// Cancel it
+clearTimeout(timerId);
+console.log("Timer was cancelled");
+
+// Practical example: Auto-hide notification
+let notificationTimer;
+
+function showNotification(message) {
+    console.log("Notification:", message);
+    
+    // Hide after 3 seconds
+    notificationTimer = setTimeout(() => {
+        console.log("Notification hidden");
+    }, 3000);
+}
+
+function hideNotificationNow() {
+    clearTimeout(notificationTimer);
+    console.log("Notification hidden immediately");
+}
+
+// Test it
+showNotification("Welcome!");
+
+
+
+
+console.log("")
+// setInterval runs code REPEATEDLY
+// Syntax: setInterval(function, milliseconds)
+
+let counter = 0;
+
+// This runs every 1 second
+let intervalId = setInterval(function() {
+    counter++;
+    console.log("Counter:", counter);
+    
+    // Stop after 5 times
+    if (counter >= 5) {
+        clearInterval(intervalId);
+        console.log("Stopped!");
+    }
+}, 1000);
+ console.log("");
+ // Simple Countdown Timer
+
+//javascript
+function startCountdown(seconds) {
+    let timeLeft = seconds;
+    
+    console.log("Countdown started:", timeLeft);
+    
+    let countdownId = setInterval(function() {
+        timeLeft--;
+        console.log("Time left:", timeLeft);
+        
+        if (timeLeft <= 0) {
+            clearInterval(countdownId);
+            console.log("Time's up!");
+        }
+    }, 1000);
+}
+
+// Start a 10 second countdown
+startCountdown(10);
+console.log("")
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Live Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        
+        .clock {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 48px;
+            display: inline-block;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Clock</h1>
+    
+    <div class="clock" id="clockDisplay">00:00:00</div>
+    
+    <br><br>
+    
+    <button onclick="startClock()">Start</button>
+    <button onclick="stopClock()">Stop</button>
+
+    <script>
+        let clockInterval = null;
+        
+        function updateClock() {
+            // Get current time
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            
+            // Add leading zeros
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+            
+            // Display time
+            let timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById('clockDisplay').textContent = timeString;
+        }
+        
+        function startClock() {
+            updateClock(); // Show time immediately
+            clockInterval = setInterval(updateClock, 1000); // Update every second
+        }
+        
+        function stopClock() {
+            clearInterval(clockInterval);
+        }
+        
+        // Start automatically
+        startClock();
+        stopClock();
+    </script>
+</body>
+</html>
+// Countdown Timer Example
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        .timer {
+            background-color: #e74c3c;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            font-size: 72px;
+            display: inline-block;
+            margin: 20px;
+        }
+        
+        input {
+            padding: 10px;
+            font-size: 18px;
+            width: 80px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    
+    <div class="timer" id="timerDisplay">00:00</div>
+    
+    <br>
+    
+    <input type="number" id="minutesInput" placeholder="Minutes" value="5">
+    <input type="number" id="secondsInput" placeholder="Seconds" value="0">
+    
+    <br><br>
+    
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <script>
+        let timerInterval = null;
+        let totalSeconds = 0;
+        
+        function updateDisplay() {
+            let minutes = Math.floor(totalSeconds / 60);
+            let seconds = totalSeconds % 60;
+            
+            // Add leading zeros
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+            
+            document.getElementById('timerDisplay').textContent = minutes + ":" + seconds;
+            
+            // Alert when time is up
+            if (totalSeconds <= 0) {
+                document.getElementById('timerDisplay').textContent = "TIME'S UP!";
+            }
+        }
+        
+        function startTimer() {
+            // Get user input
+            let minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+            let seconds = parseInt(document.getElementById('secondsInput').value) || 0;
+            
+            totalSeconds = (minutes * 60) + seconds;
+            
+            if (totalSeconds <= 0) {
+                alert("Please enter a time!");
+                return;
+            }
+            
+            updateDisplay();
+            
+            // Start countdown
+            timerInterval = setInterval(function() {
+                totalSeconds--;
+                updateDisplay();
+                
+                if (totalSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time's up!");
+                }
+            }, 1000);
+        }
+        
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+        
+        function resetTimer() {
+            clearInterval(timerInterval);
+            totalSeconds = 0;
+            updateDisplay();
+        }
+        
+        updateDisplay();
+// Simple examples for your café project
+
+// 1. Auto-hide success message
+function showSuccessMessage(message) {
+    let messageDiv = document.getElementById('successMessage');
+    messageDiv.textContent = message;
+    messageDiv.style.display = 'block';
+    
+    // Hide after 3 seconds
+    setTimeout(function() {
+        messageDiv.style.display = 'none';
+    }, 3000);
+}
+
+// 2. Order preparation timer
+function startOrderTimer(orderId, minutes) {
+    let seconds = minutes * 60;
+    
+    let orderInterval = setInterval(function() {
+        seconds--;
+        
+        let mins = Math.floor(seconds / 60);
+        let secs = seconds % 60;
+        
+        console.log(`Order ${orderId}: ${mins}:${secs} remaining`);
+        
+        if (seconds <= 0) {
+            clearInterval(orderInterval);
+            console.log(`Order ${orderId} is ready!`);
+            alert(`Order ${orderId} is ready for pickup!`);
+        }
+    }, 1000);
+}
+
+// 3. Auto-logout after inactivity
+let logoutTimer;
+
+function resetLogoutTimer() {
+    // Clear existing timer
+    clearTimeout(logoutTimer);
+    
+    // Set new timer (30 minutes)
+    logoutTimer = setTimeout(function() {
+        alert("You've been logged out due to inactivity");
+        // Add logout code here
+    }, 30 * 60 * 1000); // 30 minutes in milliseconds
+}
+
+// Reset timer on any user activity
+document.addEventListener('click', resetLogoutTimer);
+document.addEventListener('keypress', resetLogoutTimer);
+
+// Start the timer
+resetLogoutTimer();
+
+    </script>
+</body>
+</html>
